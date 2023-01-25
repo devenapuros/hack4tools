@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 28px;
+    width: 28px;
+    background-color: var(--primary-color);
+}
+
+.brand {
+    font-size: 1rem;
+    color: var(--primary-text);
+}
