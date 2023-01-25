@@ -10,7 +10,7 @@ export default function Document() {
                     content="width=device-width, initial-scale=1"
                 />
                 <meta name="color-scheme" content="dark light"></meta>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
             <body>
                 <Main />

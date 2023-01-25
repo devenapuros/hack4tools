@@ -1,0 +1,27 @@
+.toggleButton {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    color: var(--secondary-text);
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.toggleButton:hover {
+    background-color: var(--hover);
+}
+
+@media (prefers-color-scheme: dark) {
+    .sun {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .moon {
+        display: none;
+    }
+}

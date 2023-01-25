@@ -1,10 +1,12 @@
 import { Topbar } from "@/components/topbar";
 
-export default function Home() {
+export default function Tools() {
     return (
         <>
             <Topbar />
-            <main>Hello world!</main>
+            <section>
+                <h1>All tools</h1>
+            </section>
         </>
     );
 }

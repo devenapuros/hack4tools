@@ -1,10 +1,12 @@
 import { Topbar } from "@/components/topbar";
 
-export default function Home() {
+export default function About() {
     return (
         <>
             <Topbar />
-            <main>Hello world!</main>
+            <section>
+                <h1>About</h1>
+            </section>
         </>
     );
 }
