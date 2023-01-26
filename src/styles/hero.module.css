@@ -1,0 +1,24 @@
+.container {
+    position: relative;
+    margin: 2rem 0 6rem;
+    padding: 2rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 18rem;
+    background: var(--background-alt);
+    background: #8e0e00;
+    background: -webkit-linear-gradient(to left, #290000, #8e0e00);
+    background: linear-gradient(to left, #290000, #8e0e00);
+    color: white;
+    border-radius: 1rem;
+}
+
+.searchInput {
+    position: absolute;
+    bottom: -2rem;
+    width: 80%;
+}

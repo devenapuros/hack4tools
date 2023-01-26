@@ -1,3 +1,4 @@
+import { SearchInput } from "@/components/searchInput";
 import { Topbar } from "@/components/topbar";
 
 export default function Tools() {
@@ -5,7 +6,7 @@ export default function Tools() {
         <>
             <Topbar />
             <section>
-                <h1>All tools</h1>
+                <SearchInput />
             </section>
         </>
     );

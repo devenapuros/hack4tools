@@ -1,18 +1,22 @@
 :root {
     color-scheme: dark light;
     --primary-color: #ff002b;
-    --background: #fdfeff;
+    --background: #f9fafb;
+    --background-alt: white;
     --primary-text: #111;
     --secondary-text: #222;
-    --hover: #00000015;
+    --gray-color: #777;
+    --hover: #ddd;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0b0b0b;
-        --primary-text: #eee;
-        --secondary-text: #ccc;
-        --hover: #ffffff15;
+        --background-alt: #131313;
+        --primary-text: #f5f5f5;
+        --secondary-text: #e5e5e5;
+        --gray-color: #888;
+        --hover: #2b2b2b;
     }
 }
 
@@ -26,9 +30,13 @@
 
 body {
     margin: 0 auto;
-    width: 768px;
+    width: 800px;
     background-color: var(--background);
 }
+
+/* p {
+    color: var(--secondary-text);
+} */
 
 #nprogress .bar {
     background: var(--primary-color) !important;

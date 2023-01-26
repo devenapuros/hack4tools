@@ -1,0 +1,67 @@
+.card {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background-alt);
+    border: 1px solid var(--hover);
+    border-radius: 8px;
+    transition: transform 200ms ease;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-size: 1.1rem;
+    color: var(primary-text);
+}
+
+.header small,
+.autor {
+    color: var(--gray-color);
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.autor:hover {
+    color: var(--primary-color);
+}
+
+.categories {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+}
+
+.description {
+    color: var(secondary-text);
+    font-size: 0.91rem;
+}
+
+.category {
+    padding: 2px 4px;
+    font-size: 0.83rem;
+    border-radius: 3px;
+    color: var(--gray-color);
+    background-color: #00000008;
+}
+
+@media (prefers-color-scheme: dark) {
+    .category {
+        background-color: #ffffff08;
+    }
+}
