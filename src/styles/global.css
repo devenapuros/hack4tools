@@ -13,8 +13,8 @@
     :root {
         --background: #0b0b0b;
         --background-alt: #131313;
-        --primary-text: #f5f5f5;
-        --secondary-text: #e5e5e5;
+        --primary-text: #f0f0f0;
+        --secondary-text: #e0e0e0;
         --gray-color: #888;
         --hover: #2b2b2b;
     }
@@ -34,14 +34,15 @@ body {
     background-color: var(--background);
 }
 
-/* p {
-    color: var(--secondary-text);
-} */
-
 #nprogress .bar {
     background: var(--primary-color) !important;
 }
 
 #nprogress .peg {
     box-shadow: 0 0 10px var(--primary-color), 0 0 5px var(--primary-color) !important;
+}
+
+/* REUSABLE CLASSES */
+.text-muted {
+    color: var(--gray-color);
 }

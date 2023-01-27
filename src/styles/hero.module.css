@@ -11,8 +11,8 @@
     height: 18rem;
     background: var(--background-alt);
     background: #8e0e00;
-    background: -webkit-linear-gradient(to left, #290000, #8e0e00);
-    background: linear-gradient(to left, #290000, #8e0e00);
+    background: -webkit-linear-gradient(to left, #530000, #8e0e00);
+    background: linear-gradient(to left, #530000, #8e0e00);
     color: white;
     border-radius: 1rem;
 }
