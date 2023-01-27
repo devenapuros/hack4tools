@@ -1,5 +1,5 @@
-import React from "react";
+import styles from "@/styles/categoryGrid.module.css";
 
-export const categoryGrid = () => {
-    return <div>categoryGrid</div>;
+export const CategoryGrid = ({ children }) => {
+    return <div className={styles.grid}>{children}</div>;
 };

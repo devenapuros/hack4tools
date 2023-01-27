@@ -7,14 +7,7 @@ export default function About() {
         <>
             <Topbar />
             <Section>
-                <h1>About</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quam, in eaque blanditiis tempore officiis, labore nihil
-                    placeat adipisci voluptatibus veniam dolorem? Labore, at
-                    explicabo. Vero magni porro ad eaque quos!
-                </p>
-                <h2>Contributors</h2>
+                <h1>Awesome tool</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Quam, in eaque blanditiis tempore officiis, labore nihil

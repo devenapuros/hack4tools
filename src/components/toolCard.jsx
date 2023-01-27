@@ -23,6 +23,7 @@ export const ToolCard = () => {
                     <li className={styles.category}>Osint</li>
                 </ul>
             </div>
+            {/* <div className={styles.newLabel}>new</div> */}
         </article>
     );
 };

@@ -8,7 +8,7 @@ export const Menu = () => {
         <ul className={styles.ul}>
             <MenuLink href="/tools">All tools</MenuLink>
             <MenuLink href="/about">About</MenuLink>
-            <MenuLink href="/about">Contribute</MenuLink>
+            <MenuLink href="/contribute">Contribute</MenuLink>
             <ExternalLink href="https://github.com/devenapuros/hack4tools">
                 <Github size={20} />
             </ExternalLink>
