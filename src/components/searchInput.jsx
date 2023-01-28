@@ -8,7 +8,7 @@ export const SearchInput = ({ className = "" }) => {
             <input
                 className={styles.input}
                 type="text"
-                placeholder="Search tools here by name, tags or keywords"
+                placeholder="Search tools here by name, category or keywords"
             />
             <PrimaryButton>
                 <Search size={20} />

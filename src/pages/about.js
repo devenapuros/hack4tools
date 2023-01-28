@@ -1,29 +1,47 @@
 import { Footer } from "@/components/footer";
 import { Section } from "@/components/section";
 import { Topbar } from "@/components/topbar";
+import styles from "@/styles/about.module.css";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function About() {
+    const [contributors, setContributors] = useState([]);
+    useEffect(() => {
+        fetch(
+            "https://api.github.com/repos/devenapuros/hack4tools/contributors"
+        )
+            .then((res) => res.json())
+            .then((response) => setContributors(response));
+    }, []);
+
     return (
         <>
             <Topbar />
             <Section>
-                <div>
+                <article className={styles.aboutSection}>
                     <h1>About</h1>
                     <p>
                         This project was created to collect and share hacking
-                        and cybersecurity tools with the S4vitar community.
+                        and cybersecurity tools with the{" "}
+                        <strong>S4vitar</strong> community.
+                        <br /> It is developed with Next.js, styled with CSS
+                        Modules and deployed on Vercel services.
                     </p>
                     <p>
-                        It is developed with Next.js and deployed on Vercel
-                        services.
+                        If you want to contribute to this project, please review
+                        the{" "}
+                        <Link href="/contribute" className={styles.link}>
+                            Contribute
+                        </Link>{" "}
+                        section.
                     </p>
-                    <strong>
-                        Resources to learn hacking and cybersecurity:
-                    </strong>
+                    <h2>Resources to learn hacking and cybersecurity:</h2>
                     <ul>
                         <li>
                             S4vitar&apos;s twitch channel:{" "}
                             <a
+                                className={styles.link}
                                 href="https://twitch.tv/s4vitaar"
                                 target="_blank"
                                 rel="noreferrer"
@@ -33,13 +51,43 @@ export default function About() {
                         </li>
                         <li>
                             Hack4u Academy:{" "}
-                            <a href="https//hack4u.io">hack4u.io</a>
+                            <a
+                                className={styles.link}
+                                href="https://hack4u.io"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                hack4u.io
+                            </a>
                         </li>
                     </ul>
-                </div>
-                <div>
-                    <h3>Contributors</h3>
-                </div>
+                </article>
+                <article className={styles.aboutSection}>
+                    <h2>Contributors</h2>
+                    <ul className={styles.contributors}>
+                        {contributors &&
+                            contributors.length > 0 &&
+                            contributors.map((item) => (
+                                <li key={item.login}>
+                                    <a
+                                        href={item.html_url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <figure>
+                                            <img
+                                                src={item.avatar_url}
+                                                alt={item.login}
+                                            />
+                                            <figcaption>
+                                                {item.login}
+                                            </figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            ))}
+                    </ul>
+                </article>
             </Section>
             <Footer />
         </>
