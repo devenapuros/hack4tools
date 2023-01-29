@@ -5,16 +5,7 @@ import styles from "@/styles/about.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function About() {
-    const [contributors, setContributors] = useState([]);
-    useEffect(() => {
-        fetch(
-            "https://api.github.com/repos/devenapuros/hack4tools/contributors"
-        )
-            .then((res) => res.json())
-            .then((response) => setContributors(response));
-    }, []);
-
+export default function About({ contributors }) {
     return (
         <>
             <Topbar />
@@ -92,4 +83,16 @@ export default function About() {
             <Footer />
         </>
     );
+}
+
+export async function getStaticProps() {
+    try {
+        const response = await fetch(
+            "https://api.github.com/repos/devenapuros/hack4tools/contributors"
+        );
+        const contributors = await response.json();
+        return { props: { contributors } };
+    } catch (error) {
+        return { props: { contributors: [] } };
+    }
 }

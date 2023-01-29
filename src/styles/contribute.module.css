@@ -1,0 +1,29 @@
+.contributeSection {
+    gap: 1.5rem;
+}
+
+.contributeSection h1 {
+    color: (--primary-text);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.contributeSection h2 {
+    color: (--primary-text);
+    font-size: 1.3rem;
+    margin: 1rem 0 0;
+}
+
+.contributeSection p {
+    color: var(--secondary-text);
+}
+
+.contributeSection ul {
+    list-style: inside;
+}
+
+.link {
+    display: inline;
+    color: var(--primary-color);
+    text-decoration: none;
+}
