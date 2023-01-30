@@ -14,16 +14,46 @@
     margin: 1rem 0 0;
 }
 
+.contributeSection h3,
+.contributeSection h4 {
+    color: var(--secondary-text);
+}
+
 .contributeSection p {
     color: var(--secondary-text);
 }
 
 .contributeSection ul {
     list-style: inside;
+    color: var(--secondary-text);
+}
+
+.contributeSection ol {
+    list-style: decimal inside;
+    color: var(--secondary-text);
 }
 
 .link {
     display: inline;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.code {
+    font-family: monospace;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: var(--gray-color);
+    background-color: #0000000a;
+    font-size: 0.91rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .code {
+        background-color: #ffffff10;
+    }
 }

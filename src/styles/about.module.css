@@ -22,6 +22,7 @@
 
 .aboutSection ul {
     list-style: inside;
+    color: var(--secondary-text);
 }
 
 .link {
