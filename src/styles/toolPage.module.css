@@ -10,7 +10,7 @@
 }
 
 .section h1 {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     color: var(--primary-text);
 }
 
@@ -26,6 +26,10 @@
 
 .section p {
     color: var(--secondary-text);
+}
+
+.section small {
+    font-size: 0.91rem;
 }
 
 .autor {
