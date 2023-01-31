@@ -1,0 +1,54 @@
+.section {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 1.7rem;
+    color: var(--primary-text);
+}
+
+.section h2 {
+    font-size: 1.1rem;
+    color: var(--primary-text);
+}
+
+.section ul {
+    list-style: none;
+    color: var(--secondary-text);
+}
+
+.section p {
+    color: var(--secondary-text);
+}
+
+.autor {
+    color: var(--grey-color);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.category {
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: var(--secondary-text);
+    background-color: #0000000a;
+    font-size: 0.91rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .category {
+        background-color: #ffffff10;
+    }
+}
