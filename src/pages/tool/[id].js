@@ -39,7 +39,12 @@ export default function About({ tool }) {
                 </div>
                 <div className={styles.row}>
                     {tool.repo && (
-                        <a className={buttonStyle.button} href={tool.repo}>
+                        <a
+                            className={buttonStyle.button}
+                            href={tool.repo}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <Github size={20} />
                             Github
                         </a>
