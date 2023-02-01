@@ -1,0 +1,11 @@
+.box {
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 600;
+}

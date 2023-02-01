@@ -16,7 +16,7 @@ export const ToolCard = ({
 }) => {
     return (
         <Link href={`/tool/${id}`} className={styles.card}>
-            <ImageBox color={color} src={logo} />
+            <ImageBox color={color} src={logo} alt={name} />
             <div className={styles.data}>
                 <header className={styles.header}>
                     <h1>{name}</h1>
