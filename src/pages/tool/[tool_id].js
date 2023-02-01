@@ -14,7 +14,7 @@ export default function About() {
         <>
             <Topbar />
             <Section className={styles.section}>
-                <ImageBox size="6rem" />
+                <ImageBox size={96} />
                 <div>
                     <h1>Awesome tool</h1>
                     <small className="text-muted">
