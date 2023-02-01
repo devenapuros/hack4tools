@@ -5,7 +5,7 @@ export const tools = [
         name: "Villian",
         newRelease: true,
         autor: "t3l3machus",
-        autorWebsite: "https://github.com/t3l3machus/Villain",
+        autorWebsite: "https://github.com/t3l3machus",
         repo: "https://github.com/t3l3machus/Villain",
         website: "",
         logo: "",

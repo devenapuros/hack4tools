@@ -2,24 +2,40 @@ import Link from "next/link";
 import styles from "@/styles/toolCard.module.css";
 import { ImageBox } from "@/components/imageBox";
 
-export const ToolCard = ({ allowTag }) => {
+export const ToolCard = ({
+    id,
+    name,
+    newRelease,
+    autor,
+    logo,
+    color,
+    description,
+    slogan,
+    categories,
+    allowTag,
+}) => {
     return (
-        <Link href="/tool/1" className={styles.card}>
-            <ImageBox />
+        <Link href={`/tool/${id}`} className={styles.card}>
+            <ImageBox color={color} src={logo} />
             <div className={styles.data}>
                 <header className={styles.header}>
-                    <h1>Awesome Tool</h1>
-                    <small>By Devenapuros</small>
+                    <h1>{name}</h1>
+                    <small>By {autor}</small>
                 </header>
-                <p className={styles.description}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
+                <p className={styles.description}>{slogan || description}</p>
                 <ul className={styles.categories}>
-                    <li className={styles.category}>Backdoors</li>
-                    <li className={styles.category}>Osint</li>
+                    {categories &&
+                        categories.length > 0 &&
+                        categories.map((category) => (
+                            <li key={category} className={styles.category}>
+                                {category}
+                            </li>
+                        ))}
                 </ul>
             </div>
-            {allowTag && <div className={styles.newLabel}>new</div>}
+            {allowTag && newRelease && (
+                <div className={styles.newLabel}>new</div>
+            )}
         </Link>
     );
 };

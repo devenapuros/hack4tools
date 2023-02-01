@@ -5,7 +5,7 @@ import { ToolCard } from "@/components/toolCard";
 import { ToolsGrid } from "@/components/toolsGrid";
 import { Topbar } from "@/components/topbar";
 
-export default function Tools() {
+export default function Tools({ tools }) {
     return (
         <>
             <Topbar />
@@ -16,15 +16,25 @@ export default function Tools() {
                     <small className="text-muted">432 results</small>
                 </div>
                 <ToolsGrid>
-                    <ToolCard allowTag />
-                    <ToolCard allowTag />
-                    <ToolCard allowTag />
-                    <ToolCard allowTag />
-                    <ToolCard allowTag />
-                    <ToolCard allowTag />
+                    {tools &&
+                        tools.length > 0 &&
+                        tools.map((tool) => (
+                            <ToolCard allowTag key={tool.id} {...tool} />
+                        ))}
                 </ToolsGrid>
             </Section>
             <Footer />
         </>
     );
+}
+
+export async function getStaticProps() {
+    try {
+        const response = await fetch("http://localhost:3000/api/tools");
+        const tools = await response.json();
+
+        return { props: { tools } };
+    } catch (error) {
+        return { props: {} };
+    }
 }

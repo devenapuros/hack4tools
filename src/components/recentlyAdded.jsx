@@ -7,12 +7,11 @@ export const RecentlyAdded = ({ newReleases }) => {
         <Section>
             <h3>Recently added</h3>
             <ToolsGrid>
-                <ToolCard />
-                <ToolCard />
-                <ToolCard />
-                <ToolCard />
-                <ToolCard />
-                <ToolCard />
+                {newReleases &&
+                    newReleases.length > 0 &&
+                    newReleases.map((release) => (
+                        <ToolCard key={release.id} {...release} />
+                    ))}
             </ToolsGrid>
         </Section>
     );
