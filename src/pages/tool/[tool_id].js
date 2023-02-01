@@ -1,29 +1,41 @@
 import { ExternalLink } from "@/components/ExternalLink";
-import { ColorBox } from "@/components/colorBox";
 import { Footer } from "@/components/footer";
+import { ImageBox } from "@/components/imageBox";
 import { PrimaryButton } from "@/components/primaryButton";
 import { Section } from "@/components/section";
 import { Topbar } from "@/components/topbar";
+import { Github } from "@/icons/github";
+import { Globe } from "@/icons/globe";
 import styles from "@/styles/toolPage.module.css";
+import buttonStyle from "@/styles/primaryButton.module.css";
 
 export default function About() {
     return (
         <>
             <Topbar />
             <Section className={styles.section}>
-                <ColorBox />
+                <ImageBox size="6rem" />
                 <div>
                     <h1>Awesome tool</h1>
                     <small className="text-muted">
                         by{" "}
-                        <ExternalLink className={styles.autor}>
+                        <ExternalLink
+                            className={styles.autor}
+                            href="https://github.com/devenapuros"
+                        >
                             Devenapuros
                         </ExternalLink>
                     </small>
                 </div>
                 <div className={styles.row}>
-                    <PrimaryButton>Github</PrimaryButton>
-                    <PrimaryButton>Website</PrimaryButton>
+                    <a className={buttonStyle.button}>
+                        <Github size={20} />
+                        Github
+                    </a>
+                    {/* <a className={buttonStyle.button}>
+                        <Globe size={20} />
+                        Website
+                    </a> */}
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.

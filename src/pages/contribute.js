@@ -116,7 +116,9 @@ export default function Contribute() {
                     </li>
                     <li>
                         Open a Pull Request in the original repository. Include
-                        a concise description of the changes you have made.
+                        a detailed description of the changes you have made. If
+                        necessary, include screenshots or videos to give more
+                        context to your changes.
                     </li>
                 </ol>
             </Section>

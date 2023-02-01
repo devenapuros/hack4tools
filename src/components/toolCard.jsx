@@ -1,19 +1,15 @@
+import Link from "next/link";
 import styles from "@/styles/toolCard.module.css";
-import { ColorBox } from "./colorBox";
+import { ImageBox } from "@/components/imageBox";
 
-export const ToolCard = () => {
+export const ToolCard = ({ allowTag }) => {
     return (
-        <article className={styles.card}>
-            <ColorBox />
+        <Link href="/tool/1" className={styles.card}>
+            <ImageBox />
             <div className={styles.data}>
                 <header className={styles.header}>
                     <h1>Awesome Tool</h1>
-                    <small>
-                        By&nbsp;
-                        <a className={styles.autor} href="#">
-                            Devenapuros
-                        </a>
-                    </small>
+                    <small>By Devenapuros</small>
                 </header>
                 <p className={styles.description}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -23,7 +19,7 @@ export const ToolCard = () => {
                     <li className={styles.category}>Osint</li>
                 </ul>
             </div>
-            {/* <div className={styles.newLabel}>new</div> */}
-        </article>
+            {allowTag && <div className={styles.newLabel}>new</div>}
+        </Link>
     );
 };

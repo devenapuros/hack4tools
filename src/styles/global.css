@@ -2,21 +2,21 @@
     color-scheme: dark light;
     --primary-color: #ff002b;
     --background: #f9fafb;
-    --background-alt: white;
+    --background-alt: #fefefe;
     --primary-text: #111;
     --secondary-text: #222;
     --gray-color: #727272;
-    --hover: #ddd;
+    --hover: #11111120;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
+        --background: #0b0b0b;
         --background-alt: #111;
-        --primary-text: #f0f0f0;
+        --primary-text: #efefef;
         --secondary-text: #dfdfdf;
         --gray-color: #888;
-        --hover: #2b2b2b;
+        --hover: #eeeeee12;
     }
 }
 

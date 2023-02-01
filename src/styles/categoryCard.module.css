@@ -8,6 +8,7 @@
     border: 1px solid var(--hover);
     border-radius: 6px;
     color: var(--secondary-text);
+    text-decoration: none;
     transition: transform 200ms ease, background-color 200ms ease,
         border 200ms ease;
 }

@@ -8,6 +8,7 @@
     background-color: var(--background-alt);
     border: 1px solid var(--hover);
     border-radius: 8px;
+    text-decoration: none;
     transition: transform 200ms ease;
 }
 
@@ -56,11 +57,11 @@
 }
 
 .category {
-    padding: 2px 4px;
+    padding: 2px 6px;
     font-size: 0.83rem;
-    border-radius: 3px;
+    border-radius: 4px;
     color: var(--gray-color);
-    background-color: #00000008;
+    background-color: #0000000a;
 }
 
 .newLabel {
@@ -77,6 +78,6 @@
 
 @media (prefers-color-scheme: dark) {
     .category {
-        background-color: #ffffff08;
+        background-color: #ffffff0a;
     }
 }

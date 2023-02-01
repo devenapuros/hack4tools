@@ -16,12 +16,12 @@ export default function Tools() {
                     <small className="text-muted">432 results</small>
                 </div>
                 <ToolsGrid>
-                    <ToolCard />
-                    <ToolCard />
-                    <ToolCard />
-                    <ToolCard />
-                    <ToolCard />
-                    <ToolCard />
+                    <ToolCard allowTag />
+                    <ToolCard allowTag />
+                    <ToolCard allowTag />
+                    <ToolCard allowTag />
+                    <ToolCard allowTag />
+                    <ToolCard allowTag />
                 </ToolsGrid>
             </Section>
             <Footer />
