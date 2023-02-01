@@ -12,7 +12,7 @@ export const ToolCard = ({
     description,
     slogan,
     categories,
-    allowTag,
+    allowTag = true,
 }) => {
     return (
         <Link href={`/tool/${id}`} className={styles.card}>
