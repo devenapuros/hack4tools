@@ -30,4 +30,19 @@ export const tools = [
         slogan: "Find way more from the Wayback Machine!",
         categories: [categories.OSINT],
     },
+    {
+        id: "cervantes",
+        name: "Cervantes",
+        newRelease: false,
+        autor: "CervantesSec",
+        autorWebsite: "https://github.com/CervantesSec",
+        repo: "https://github.com/CervantesSec/cervantes",
+        website: "https://www.cervantessec.org/",
+        logo: "",
+        color: "#023047",
+        description:
+            "Open source collaborative platform for pentesters or red teams who want to save time to manage their projects, clients, vulnerabilities and reports in one place.",
+        slogan: "Open source collaborative platform for pentesters.",
+        categories: [categories.OTHER],
+    },
 ];

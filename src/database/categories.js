@@ -8,4 +8,5 @@ export const categories = {
     DICTIONARIES: "Dictionaries",
     ENUMERATION: "Enumeration",
     EXPLOITATION: "Exploitation",
+    OTHER: "Other",
 };

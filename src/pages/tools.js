@@ -1,3 +1,4 @@
+import Fuse from "fuse.js";
 import { Footer } from "@/components/footer";
 import { SearchInput } from "@/components/searchInput";
 import { Section } from "@/components/section";
@@ -5,7 +6,14 @@ import { ToolCard } from "@/components/toolCard";
 import { ToolsGrid } from "@/components/toolsGrid";
 import { Topbar } from "@/components/topbar";
 
+const searchOptions = {
+    includeScore: true,
+    keys: ["name", "author", "description", "categories"],
+};
+
 export default function Tools({ tools }) {
+    const fuse = new Fuse(tools, searchOptions);
+
     return (
         <>
             <Topbar />

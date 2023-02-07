@@ -1,20 +1,37 @@
 .container {
     position: relative;
     margin: 2rem 0 6rem;
-    padding: 2rem 4rem 4rem;
+    padding: 4rem 4rem 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    text-align: center;
+    gap: 1rem;
     width: 100%;
-    height: 18rem;
-    background: var(--background-alt);
-    background: #8e0e00;
-    background: -webkit-linear-gradient(to left, #530000, #8e0e00);
-    background: linear-gradient(to left, #530000, #8e0e00);
-    color: white;
+    background: #860808;
+    background: -webkit-linear-gradient(to left, #860808, #bb1300);
+    background: linear-gradient(to left, #860808, #bb1300);
     border-radius: 1rem;
+}
+
+.container h1 {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.container small {
+    color: #aaa;
+}
+
+.container p {
+    max-width: 348px;
+    text-align: center;
+    color: #ddd;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .searchInput {
