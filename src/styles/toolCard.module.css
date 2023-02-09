@@ -48,7 +48,6 @@
     color: var(--secondary-text);
     font-size: 0.91rem;
     display: -webkit-box;
-    max-width: 99%;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;

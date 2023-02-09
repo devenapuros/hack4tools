@@ -24,7 +24,13 @@ export default function About({ tool }) {
         <>
             <Topbar />
             <Section className={styles.section}>
-                <ImageBox size={96} color={tool.color} alt={tool.name} corner={16} />
+                <ImageBox
+                    src={tool.logo}
+                    size={96}
+                    color={tool.color}
+                    alt={tool.name}
+                    corner={16}
+                />
                 <div>
                     <h1>{tool.name}</h1>
                     <small className="text-muted">

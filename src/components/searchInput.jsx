@@ -5,14 +5,16 @@ import { PrimaryButton } from "./primaryButton";
 export const SearchInput = ({ className = "" }) => {
     return (
         <div className={`${className} ${styles.container}`}>
-            <input
-                className={styles.input}
-                type="text"
-                placeholder="Search tools here by name, category or keywords"
-            />
-            <PrimaryButton>
-                <Search size={20} />
-            </PrimaryButton>
+            <form>
+                <input
+                    className={styles.input}
+                    type="text"
+                    placeholder="Search tools here by name, category or keywords"
+                />
+                <PrimaryButton>
+                    <Search size={20} />
+                </PrimaryButton>
+            </form>
         </div>
     );
 };

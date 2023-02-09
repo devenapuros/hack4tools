@@ -11,12 +11,12 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0b0b0b;
-        --background-alt: #111;
+        --background: #0a0a0a;
+        --background-alt: #111111;
         --primary-text: #efefef;
-        --secondary-text: #dfdfdf;
+        --secondary-text: #ccc;
         --gray-color: #888;
-        --hover: #eeeeee12;
+        --hover: #eeeeee14;
     }
 }
 

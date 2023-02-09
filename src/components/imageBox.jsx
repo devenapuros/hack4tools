@@ -11,7 +11,7 @@ export const ImageBox = ({
     if (src)
         return (
             <Image
-                src={src}
+                src={`/logos/${src}`}
                 alt={alt}
                 height={size}
                 width={size}
