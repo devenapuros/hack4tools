@@ -85,3 +85,8 @@
         background-color: #ffffff0a;
     }
 }
+
+.match {
+    background-color: #ff002b20;
+    border: 1px solid #ff002b80;
+}

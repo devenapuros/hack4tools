@@ -1,0 +1,12 @@
+.searchPill {
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    width: fit-content;
+    gap: 1rem;
+    background-color: var(--background-alt);
+    border-radius: 8px;
+    color: var(--gray-color);
+    text-decoration: none;
+}

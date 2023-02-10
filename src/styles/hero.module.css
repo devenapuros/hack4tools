@@ -34,7 +34,7 @@
     overflow: hidden;
 }
 
-.searchInput {
+.form {
     position: absolute;
     bottom: -2rem;
     width: 80%;

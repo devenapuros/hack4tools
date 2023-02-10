@@ -2,19 +2,28 @@ import { Search } from "@/icons/search";
 import styles from "@/styles/searchInput.module.css";
 import { PrimaryButton } from "./primaryButton";
 
-export const SearchInput = ({ className = "" }) => {
+export const SearchInput = ({
+    className = "",
+    name,
+    value,
+    handleChange,
+    handleBlur,
+    placeholder,
+}) => {
     return (
         <div className={`${className} ${styles.container}`}>
-            <form>
-                <input
-                    className={styles.input}
-                    type="text"
-                    placeholder="Search tools here by name, category or keywords"
-                />
-                <PrimaryButton>
-                    <Search size={20} />
-                </PrimaryButton>
-            </form>
+            <input
+                className={styles.input}
+                type="text"
+                name={name}
+                value={value}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                placeholder={placeholder}
+            />
+            <PrimaryButton type="submit">
+                <Search size={20} />
+            </PrimaryButton>
         </div>
     );
 };

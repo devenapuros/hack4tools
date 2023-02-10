@@ -1,14 +1,11 @@
 .container {
-    border: 1px solid var(--hover);
-    transition: border 200ms ease;
+    display: flex;
     padding: 8px;
     background-color: var(--background-alt);
+    border: 1px solid var(--hover);
     border-radius: 8px;
     box-shadow: #00000010 0px 8px 24px;
-}
-
-.container form {
-    display: flex;
+    transition: border 200ms ease;
 }
 
 .container:focus-within {
