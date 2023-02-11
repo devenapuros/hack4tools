@@ -1,6 +1,7 @@
 import { Search } from "@/icons/search";
 import styles from "@/styles/searchInput.module.css";
 import { PrimaryButton } from "./primaryButton";
+import { Close } from "@/icons/Close";
 
 export const SearchInput = ({
     className = "",
@@ -21,6 +22,14 @@ export const SearchInput = ({
                 onBlur={handleBlur}
                 placeholder={placeholder}
             />
+            {value && (
+                <>
+                    <button className={styles.reset} type="reset">
+                        <Close size={18} />
+                    </button>
+                    <span className={styles.divider}></span>
+                </>
+            )}
             <PrimaryButton type="submit">
                 <Search size={20} />
             </PrimaryButton>

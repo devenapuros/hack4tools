@@ -14,5 +14,5 @@ export const useForm = (initialForm) => {
         setForm(structuredClone(initialForm));
     };
 
-    return { form, setField, reset };
+    return { fields: form, setField, reset };
 };
