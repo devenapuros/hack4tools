@@ -97,7 +97,7 @@ export default function Tools({ allTools }) {
                     {searchQuery && (
                         <Link href="/tools" className={styles.showToolsBtn}>
                             <ChevronLeft size={18} />
-                            Show all tools
+                            All tools
                         </Link>
                     )}
                 </div>

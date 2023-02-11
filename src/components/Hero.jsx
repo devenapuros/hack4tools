@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 const initialForm = { search: "" };
 
 export const Hero = ({ importantTool }) => {
-    console.log(importantTool);
     const form = useForm(initialForm);
     const router = useRouter();
 
