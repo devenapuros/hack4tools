@@ -7,7 +7,7 @@ export const ColorBox = ({ content = " ", size, color, corner }) => {
             style={{
                 height: `${size}px`,
                 width: `${size}px`,
-                background: color,
+                // background: color,
                 borderRadius: `${corner}px`,
             }}
         >

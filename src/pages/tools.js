@@ -11,6 +11,8 @@ import { Close } from "@/icons/Close";
 import { useForm } from "@/hooks/useForm";
 import { NotFoundTool } from "@/components/NotFoundTool";
 import { useRouter } from "next/router";
+import { ChevronLeft } from "@/icons/ChevronLeft";
+import Link from "next/link";
 
 const searchOptions = {
     includeScore: false,
@@ -27,6 +29,7 @@ export default function Tools({ allTools }) {
     const [tools, setTools] = useState(allTools);
     const form = useForm(initialForm);
     const fuse = new Fuse(allTools, searchOptions);
+    const [searchQuery, setSearchQuery] = useState("");
     const router = useRouter();
 
     const handleInputChange = (event) => {
@@ -35,12 +38,37 @@ export default function Tools({ allTools }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        router.push(`tools?search=${form.fields.search}`);
+        if (form.fields.search) {
+            router.push(`tools?search=${form.fields.search}`);
+            setSearchQuery(form.fields.search);
+        }
     };
 
     const handleFormReset = () => {
         form.reset();
     };
+
+    useEffect(() => {
+        if (searchQuery) {
+            const filteredTools = fuse.search(searchQuery);
+            setTools(filteredTools.map((tool) => tool.item));
+        } else {
+            setTools(allTools);
+        }
+    }, [searchQuery]);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const search = params.get("search");
+        console.log(search);
+        if (search) {
+            form.setField("search", search);
+            setSearchQuery(search);
+        } else {
+            setSearchQuery("");
+            form.setField("search", "");
+        }
+    }, [router.asPath]);
 
     return (
         <>
@@ -55,24 +83,23 @@ export default function Tools({ allTools }) {
                         placeholder="Search tools here by name, category or keywords"
                     />
                 </form>
-                <div className={styles.pillsContainer}>
-                    {form.fields.search && (
-                        <div className={styles.searchPill}>
-                            Search:
-                            <span>{form.fields.search}</span>
-                            <button className={styles.reset}>
-                                <Close size={18} />
-                            </button>
-                        </div>
+                <div className={styles.row}>
+                    <div>
+                        <h1>
+                            {searchQuery
+                                ? `Results for "${searchQuery}"`
+                                : "All tools"}
+                        </h1>
+                        <small className="text-muted">
+                            {tools.length} results
+                        </small>
+                    </div>
+                    {searchQuery && (
+                        <Link href="/tools" className={styles.showToolsBtn}>
+                            <ChevronLeft size={18} />
+                            Show all tools
+                        </Link>
                     )}
-                </div>
-                <div>
-                    <h1>
-                        {form.fields.search
-                            ? `Results for "${form.fields.search}"`
-                            : "All tools"}
-                    </h1>
-                    <small className="text-muted">432 results</small>
                 </div>
                 <ToolsGrid>
                     {tools &&

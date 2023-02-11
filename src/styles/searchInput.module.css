@@ -12,7 +12,7 @@
 
 .container:focus-within {
     border: 1px solid #ff002bc0;
-    box-shadow: #ff002b20 0px 8px 24px;
+    box-shadow: #ff002b30 0px 8px 34px;
 }
 
 .input {
@@ -24,6 +24,15 @@
     outline: none;
     color: var(--primary-text);
     font-size: 1rem;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--background-alt) inset !important;
+    -webkit-text-fill-color: var(--primary-text);
+    caret-color: var(--primary-text);
 }
 
 .reset {

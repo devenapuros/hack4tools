@@ -1,42 +1,32 @@
-.pillsContainer {
+.row {
+    margin: 3rem 0 1rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
 }
 
-.searchPill {
-    padding: 0.5rem 0.8rem;
+.showToolsBtn {
+    padding: 0.6rem 1rem 0.6rem 0.6rem;
     display: flex;
     align-items: center;
     min-width: 0;
     width: fit-content;
     gap: 0.5rem;
-    background-color: #0000000d;
+    background-color: #0000000a;
     border-radius: 7px;
     color: var(--gray-color);
+    font-size: 0.91rem;
     text-decoration: none;
-}
-
-.searchPill span {
-    color: var(--secondary-text);
-}
-
-.searchPill button {
-    margin-left: 0.5rem;
-    display: flex;
-    background-color: transparent;
-    color: var(--gray-color);
-    border: 0;
-    cursor: pointer;
     transition: color 200ms ease;
 }
 
-.searchPill button:hover {
+.showToolsBtn:hover {
     color: var(--secondary-text);
+    cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {
-    .searchPill {
-        background-color: #ffffff10;
+    .showToolsBtn {
+        background-color: #ffffff0f;
     }
 }

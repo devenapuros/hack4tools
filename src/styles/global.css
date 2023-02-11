@@ -34,6 +34,10 @@ body {
     background-color: var(--background);
 }
 
+#__next {
+    height: 100vh;
+}
+
 #nprogress .bar {
     background: var(--primary-color) !important;
 }
