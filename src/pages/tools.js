@@ -10,6 +10,7 @@ import styles from "@/styles/searchPage.module.css";
 import { Close } from "@/icons/Close";
 import { useForm } from "@/hooks/useForm";
 import { NotFoundTool } from "@/components/NotFoundTool";
+import { useRouter } from "next/router";
 
 const searchOptions = {
     includeScore: false,
@@ -26,22 +27,7 @@ export default function Tools({ allTools }) {
     const [tools, setTools] = useState(allTools);
     const form = useForm(initialForm);
     const fuse = new Fuse(allTools, searchOptions);
-
-    useEffect(() => {
-        if (!form.fields.search) {
-            setTools(allTools);
-
-            return;
-        }
-
-        const filteredTools = fuse.search(form.fields.search);
-        setTools(
-            filteredTools.map((tool) => {
-                console.log(tool.matches);
-                return tool.item;
-            })
-        );
-    }, [form.fields.search]);
+    const router = useRouter();
 
     const handleInputChange = (event) => {
         form.setField(event.target.name, event.target.value);
@@ -49,6 +35,7 @@ export default function Tools({ allTools }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        router.push(`tools?search=${form.fields.search}`);
     };
 
     const handleFormReset = () => {
@@ -68,12 +55,23 @@ export default function Tools({ allTools }) {
                         placeholder="Search tools here by name, category or keywords"
                     />
                 </form>
+                <div className={styles.pillsContainer}>
+                    {form.fields.search && (
+                        <div className={styles.searchPill}>
+                            Search:
+                            <span>{form.fields.search}</span>
+                            <button className={styles.reset}>
+                                <Close size={18} />
+                            </button>
+                        </div>
+                    )}
+                </div>
                 <div>
-                    <h3>
+                    <h1>
                         {form.fields.search
                             ? `Results for "${form.fields.search}"`
                             : "All tools"}
-                    </h3>
+                    </h1>
                     <small className="text-muted">432 results</small>
                 </div>
                 <ToolsGrid>
