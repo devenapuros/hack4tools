@@ -1,33 +1,12 @@
 .container {
     position: relative;
     margin: 2rem 0 6rem;
-    padding: 3rem 4rem 6rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    width: 100%;
     background: #860808;
-    background: #610303;
-    /* background: -webkit-linear-gradient(to left, #860808, #bb1300);
-    background: linear-gradient(to left, #860808, #bb1300); */
-    background: #333333; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-        to right,
-        #dd1818,
-        #000000
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-        to right,
-        #dd1818,
-        #000000
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #dd1818, #1f0000);
+    background: linear-gradient(to right, #dd1818, #1f0000);
     border-radius: 1rem;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .container h1 {
@@ -40,7 +19,7 @@
 }
 
 .container p {
-    max-width: 348px;
+    max-width: 300px;
     text-align: center;
     color: #ddd;
     display: -webkit-box;

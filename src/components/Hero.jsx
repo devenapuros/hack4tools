@@ -1,12 +1,12 @@
 import styles from "@/styles/hero.module.css";
 import { SearchInput } from "@/components/searchInput";
-import { ImageBox } from "./imageBox";
 import { useForm } from "@/hooks/useForm";
 import { useRouter } from "next/router";
+import { Carousel } from "./Carousel";
 
 const initialForm = { search: "" };
 
-export const Hero = ({ importantTool }) => {
+export const Hero = ({ importantTools }) => {
     const form = useForm(initialForm);
     const router = useRouter();
 
@@ -27,21 +27,7 @@ export const Hero = ({ importantTool }) => {
 
     return (
         <header className={styles.container}>
-            {importantTool && (
-                <>
-                    <ImageBox
-                        size={100}
-                        color={importantTool.color}
-                        alt={importantTool.name}
-                        corner={18}
-                    />
-                    <div>
-                        <h1>{importantTool.name}</h1>
-                        <small>By {importantTool.autor}</small>
-                    </div>
-                    <p>{importantTool.slogan || importantTool.description}</p>
-                </>
-            )}
+            <Carousel totalSlides={3} tools={importantTools} />
             <form
                 className={styles.form}
                 onSubmit={handleSubmit}

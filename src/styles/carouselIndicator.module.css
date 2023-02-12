@@ -1,0 +1,18 @@
+.container {
+    position: absolute;
+    bottom: 2.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background-color: #9999;
+}
+
+.active {
+    background-color: #eee;
+}

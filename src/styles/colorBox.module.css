@@ -4,10 +4,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #666;
+    color: #ccc;
     font-size: 1.6em;
     font-weight: 600;
-    background-color: #cccccce0;
+    background-color: #111111f8;
 }
 
 @media (prefers-color-scheme: dark) {

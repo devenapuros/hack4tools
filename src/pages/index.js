@@ -4,11 +4,11 @@ import { Footer } from "@/components/footer";
 import { RecentlyAdded } from "@/components/recentlyAdded";
 import { Topbar } from "@/components/topbar";
 
-export default function Home({ categories, newReleases, importantTool }) {
+export default function Home({ categories, newReleases, importantTools }) {
     return (
         <>
             <Topbar />
-            <Hero importantTool={importantTool} />
+            <Hero importantTools={importantTools} />
             <RecentlyAdded newReleases={newReleases} />
             <Categories categories={categories} />
             <Footer />
@@ -17,8 +17,7 @@ export default function Home({ categories, newReleases, importantTool }) {
 }
 
 export async function getStaticProps() {
-    const IMPORTANT_TOOL_ID = "villian";
-
+    const IMPORTANT_TOOLS = ["villian", "smap", "cervantes"];
     try {
         const response1 = await fetch("http://localhost:3000/api/categories");
         const categories = await response1.json();
@@ -26,11 +25,14 @@ export async function getStaticProps() {
         const response2 = await fetch("http://localhost:3000/api/new-releases");
         const newReleases = await response2.json();
 
-        const response3 = await fetch(
-            `http://localhost:3000/api/tool/${IMPORTANT_TOOL_ID}`
+        let importantTools = await Promise.all(
+            IMPORTANT_TOOLS.map((tool) =>
+                fetch(`http://localhost:3000/api/tool/${tool}`).then(
+                    (response) => response.json()
+                )
+            )
         );
-        const importantTool = await response3.json();
-        return { props: { categories, newReleases, importantTool } };
+        return { props: { categories, newReleases, importantTools } };
     } catch (error) {
         return { props: {} };
     }

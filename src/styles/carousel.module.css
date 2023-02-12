@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.viewport {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    height: fit-content;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    transition: all 200ms ease;
+    list-style: none;
+    overflow: scroll hidden;
+    scrollbar-width: none;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.actionLeft,
+.actionRight {
+    position: absolute;
+    display: flex;
+    color: #aaad;
+    background-color: transparent;
+    border: 0;
+    border-radius: 100%;
+    transition: color 200ms ease, transform 200ms ease;
+}
+
+.actionLeft:hover,
+.actionRight:hover {
+    color: #eee;
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.actionLeft {
+    left: 1rem;
+}
+
+.actionRight {
+    right: 1rem;
+}

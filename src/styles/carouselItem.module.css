@@ -1,0 +1,13 @@
+.item {
+    padding: 3rem 4rem 5rem;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    width: 100%;
+}
