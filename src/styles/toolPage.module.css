@@ -26,6 +26,7 @@
 
 .section p {
     color: var(--secondary-text);
+    white-space: pre-wrap;
 }
 
 .section small {

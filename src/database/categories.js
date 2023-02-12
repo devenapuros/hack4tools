@@ -8,5 +8,6 @@ export const categories = {
     DICTIONARIES: "Dictionaries",
     ENUMERATION: "Enumeration",
     EXPLOITATION: "Exploitation",
+    FRAMEWORKS: "Frameworks",
     OTHER: "Other",
 };
