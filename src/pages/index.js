@@ -17,7 +17,7 @@ export default function Home({ categories, newReleases, importantTools }) {
 }
 
 export async function getStaticProps() {
-    const IMPORTANT_TOOLS = ["villian", "smap", "cervantes"];
+    const IMPORTANT_TOOLS = ["villian", "smap", "mosint"];
     try {
         const response1 = await fetch("http://localhost:3000/api/categories");
         const categories = await response1.json();
