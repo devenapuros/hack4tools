@@ -7,7 +7,6 @@ import { ToolCard } from "@/components/toolCard";
 import { ToolsGrid } from "@/components/toolsGrid";
 import { Topbar } from "@/components/topbar";
 import styles from "@/styles/searchPage.module.css";
-import { Close } from "@/icons/Close";
 import { useForm } from "@/hooks/useForm";
 import { NotFoundTool } from "@/components/NotFoundTool";
 import { useRouter } from "next/router";
@@ -60,7 +59,6 @@ export default function Tools({ allTools }) {
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const search = params.get("search");
-        console.log(search);
         if (search) {
             form.setField("search", search);
             setSearchQuery(search);
