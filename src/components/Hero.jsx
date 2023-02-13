@@ -8,7 +8,6 @@ import { ModuleError } from "./ModuleError";
 const initialForm = { search: "" };
 
 export const Hero = ({ importantTools }) => {
-    console.log(importantTools);
     const form = useForm(initialForm);
     const router = useRouter();
 
