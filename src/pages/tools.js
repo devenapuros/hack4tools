@@ -24,7 +24,7 @@ const initialForm = {
     search: "",
 };
 
-export default function Tools({ allTools }) {
+export default function Tools({ allTools = [] }) {
     const [tools, setTools] = useState(allTools);
     const form = useForm(initialForm);
     const fuse = new Fuse(allTools, searchOptions);
@@ -115,7 +115,7 @@ export default function Tools({ allTools }) {
 
 export async function getStaticProps() {
     try {
-        const response = await fetch("http://localhost:3000/api/tools");
+        const response = await fetch(`${process.env.API_URL}/api/tools`);
         const allTools = await response.json();
 
         return { props: { allTools } };

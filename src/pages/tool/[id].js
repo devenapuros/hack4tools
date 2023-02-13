@@ -9,17 +9,6 @@ import styles from "@/styles/toolPage.module.css";
 import buttonStyle from "@/styles/primaryButton.module.css";
 
 export default function About({ tool }) {
-    if (!tool)
-        return (
-            <>
-                <Topbar />
-                <Section className={styles.section}>
-                    <h1>404 | Tool not found</h1>
-                </Section>
-                <Footer />
-            </>
-        );
-
     return (
         <>
             <Topbar />
@@ -80,7 +69,7 @@ export default function About({ tool }) {
 }
 
 export async function getStaticPaths() {
-    const response = await fetch("http://localhost:3000/api/tools");
+    const response = await fetch(`${process.env.API_URL}/api/tools`);
     const tools = await response.json();
     const paths = tools.map((tool) => ({ params: { id: tool.id } }));
 
@@ -93,7 +82,7 @@ export async function getStaticPaths() {
 export const getStaticProps = async ({ params }) => {
     try {
         const response = await fetch(
-            `http://localhost:3000/api/tool/${params?.id}`
+            `${process.env.API_URL}/api/tool/${params?.id}`
         );
         const tool = await response.json();
         return { props: { tool } };

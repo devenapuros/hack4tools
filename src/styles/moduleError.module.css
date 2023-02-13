@@ -1,0 +1,17 @@
+.container {
+    padding: 3rem 4rem 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    color: var(--gray-color);
+}
+
+.container span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    max-width: 300px;
+}
