@@ -28,6 +28,7 @@ export const Carousel = ({ tools = [] }) => {
         for (let i = 0; i < viewportRef.current.children.length; i++) {
             observer.observe(viewportRef.current.children[i]);
         }
+        return () => clearTimeout(autoScrollTimer);
     }, []);
 
     useEffect(() => {
