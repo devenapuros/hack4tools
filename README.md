@@ -8,9 +8,9 @@
 <p align="center">
     <a href="https://hack4tools.vercel.app">Go to website</a>&nbsp;
     ·
-    &nbsp;<a href="https://github.com/devenapuros/nananames/issues">Report Bug</a>
+    &nbsp;<a href="https://github.com/devenapuros/hack4tools/issues">Report Bug</a>
     ·
-    &nbsp;<a href="https://github.com/devenapuros/nananames/CONTRIBUTING.md">Contribute</a>
+    &nbsp;<a href="https://github.com/devenapuros/hack4tools/CONTRIBUTING.md">Contribute</a>
   </p>
 <br/>
 
