@@ -8,9 +8,9 @@
 <p align="center">
     <a href="https://hack4tools.vercel.app">Go to website</a>&nbsp;
     ·
-    &nbsp;<a href="https://github.com/devenapuros/nananames/issues">Report Bug</a>
+    &nbsp;<a href="https://github.com/devenapuros/hack4tools/issues">Report Bug</a>
     ·
-    &nbsp;<a href="https://github.com/devenapuros/nananames/CONTRIBUTING.md">Contribute</a>
+    &nbsp;<a href="https://github.com/devenapuros/hack4tools/blob/main/CONTRIBUTING.md">Contribute</a>
   </p>
 <br/>
 
@@ -19,7 +19,7 @@
 This project was created to collect and share hacking and cybersecurity tools with the [S4vitar](https://twitch.tv/s4vitaar) community.
 It is developed with Next.js, styled with CSS Modules and deployed on Vercel services.
 
-If you want to contribute to this project, please review the [Contribute](https://github.com/devenapuros/hack4tools) section.
+If you want to contribute to this project, please review the [Contribute](https://github.com/devenapuros/hack4tools/blob/main/CONTRIBUTING.md) section.
 
 ## Built With 🚀
 
