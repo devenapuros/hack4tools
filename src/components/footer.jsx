@@ -15,10 +15,10 @@ export const Footer = () => {
             </section>
             <section className={styles.footerSection}>
                 <ul className={styles.footerLinks}>
-                    <MenuLink>Home</MenuLink>
-                    <MenuLink>All tools</MenuLink>
-                    <MenuLink>About</MenuLink>
-                    <MenuLink>Contribute</MenuLink>
+                    <MenuLink href="/">Home</MenuLink>
+                    <MenuLink href="/tools">All tools</MenuLink>
+                    <MenuLink href="/about">About</MenuLink>
+                    <MenuLink href="/contribute">Contribute</MenuLink>
                     <ExternalLink href="https://github.com/devenapuros/hack4tools">
                         <Github size={21} />
                     </ExternalLink>
