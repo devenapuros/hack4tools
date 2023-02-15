@@ -3,7 +3,6 @@ import { Section } from "@/components/section";
 import { Topbar } from "@/components/topbar";
 import styles from "@/styles/about.module.css";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function About({ contributors }) {
     return (

@@ -3,6 +3,7 @@ import { Categories } from "@/components/categories";
 import { Footer } from "@/components/footer";
 import { RecentlyAdded } from "@/components/recentlyAdded";
 import { Topbar } from "@/components/topbar";
+import { getCategories, getToolById, getNewReleases } from "@/database/db";
 
 export default function Home({ categories, newReleases, importantTools }) {
     return (
@@ -19,21 +20,10 @@ export default function Home({ categories, newReleases, importantTools }) {
 export async function getStaticProps() {
     const IMPORTANT_TOOLS = ["villian", "smap", "mosint"];
     try {
-        const response1 = await fetch(`${process.env.API_URL}/api/categories`);
-        const categories = await response1.json();
+        const categories = getCategories();
+        const newReleases = getNewReleases();
 
-        const response2 = await fetch(
-            `${process.env.API_URL}/api/new-releases`
-        );
-        const newReleases = await response2.json();
-
-        let importantTools = await Promise.all(
-            IMPORTANT_TOOLS.map((tool) =>
-                fetch(`${process.env.API_URL}/api/tool/${tool}`).then(
-                    (response) => response.json()
-                )
-            )
-        );
+        let importantTools = IMPORTANT_TOOLS.map((tool) => getToolById(tool));
         return { props: { categories, newReleases, importantTools } };
     } catch (error) {
         return { props: {} };

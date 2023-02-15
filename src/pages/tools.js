@@ -12,6 +12,7 @@ import { NotFoundTool } from "@/components/NotFoundTool";
 import { useRouter } from "next/router";
 import { ChevronLeft } from "@/icons/ChevronLeft";
 import Link from "next/link";
+import { getTools } from "@/database/db";
 
 const searchOptions = {
     includeScore: false,
@@ -115,9 +116,7 @@ export default function Tools({ allTools = [] }) {
 
 export async function getStaticProps() {
     try {
-        const response = await fetch(`${process.env.API_URL}/api/tools`);
-        const allTools = await response.json();
-
+        const allTools = getTools();
         return { props: { allTools } };
     } catch (error) {
         return { props: {} };

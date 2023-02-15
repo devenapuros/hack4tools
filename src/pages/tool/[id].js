@@ -7,6 +7,7 @@ import { Github } from "@/icons/github";
 import { Globe } from "@/icons/globe";
 import styles from "@/styles/toolPage.module.css";
 import buttonStyle from "@/styles/primaryButton.module.css";
+import { getTools, getToolById } from "@/database/db";
 
 export default function About({ tool }) {
     return (
@@ -69,8 +70,7 @@ export default function About({ tool }) {
 }
 
 export async function getStaticPaths() {
-    const response = await fetch(`${process.env.API_URL}/api/tools`);
-    const tools = await response.json();
+    const tools = getTools();
     const paths = tools.map((tool) => ({ params: { id: tool.id } }));
 
     return {
@@ -81,10 +81,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({ params }) => {
     try {
-        const response = await fetch(
-            `${process.env.API_URL}/api/tool/${params?.id}`
-        );
-        const tool = await response.json();
+        const tool = getToolById(params?.id);
         return { props: { tool } };
     } catch (error) {
         return { props: {} };

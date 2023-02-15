@@ -1,5 +1,4 @@
 import { Footer } from "@/components/footer";
-import { PrimaryButton } from "@/components/primaryButton";
 import { Section } from "@/components/section";
 import { Topbar } from "@/components/topbar";
 import styles from "@/styles/contribute.module.css";

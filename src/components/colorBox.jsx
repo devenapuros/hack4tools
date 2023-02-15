@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "@/styles/colorBox.module.css";
 
 export const ColorBox = ({ content = " ", size, color, corner }) => {
