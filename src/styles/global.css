@@ -5,14 +5,14 @@
     --background-alt: #fefefe;
     --primary-text: #111;
     --secondary-text: #222;
-    --gray-color: #727272;
+    --gray-color: #666666;
     --hover: #11111120;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #080808;
-        --background-alt: #121212;
+        --background-alt: #131313;
         --primary-text: #efefef;
         --secondary-text: #ccc;
         --gray-color: #888;

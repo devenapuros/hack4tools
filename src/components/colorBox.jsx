@@ -3,7 +3,7 @@ import styles from "@/styles/colorBox.module.css";
 
 export const ColorBox = ({ content = " ", size, color, corner }) => {
     return (
-        <div
+        <figure
             className={styles.box}
             style={{
                 height: `${size}px`,
@@ -13,6 +13,6 @@ export const ColorBox = ({ content = " ", size, color, corner }) => {
             }}
         >
             {content[0]}
-        </div>
+        </figure>
     );
 };

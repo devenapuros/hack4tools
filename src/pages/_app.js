@@ -17,13 +17,16 @@ export default function App({ Component, pageProps }) {
                 <meta name="author" content="Devenapuros" />
 
                 <meta
-                    name="og:title"
+                    property="og:title"
                     content="Hack4tools - Hacking and cybersecurity tools"
                 />
-                <meta name="og:image" content="/board.png" />
-                <meta name="og:url" content="https://hack4tools.vercel.app" />
+                <meta property="og:image" content="/board.png" />
                 <meta
-                    name="og:description"
+                    property="og:url"
+                    content="https://hack4tools.vercel.app"
+                />
+                <meta
+                    property="og:description"
                     content="The best cybersecurity and hacking tools used by pentesters around the world."
                 />
 
